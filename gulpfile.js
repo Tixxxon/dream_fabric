@@ -13,14 +13,19 @@ let gulp = require('gulp'),
 gulp.task('clear', () => {
   return del('build');
 });
-gulp.task('less', () => {
-  return gulp.src('src/public/less/main.less')
-    .pipe(less())
-    .pipe(rename('main.min.css'))
-    .pipe(gulp.dest('build/public/css/'));
-});
+// Убираем пока, так как используем scss
+// gulp.task('less', () => {
+//   return gulp.src('src/public/less/main.less')
+//     .pipe(less())
+//     .pipe(rename('main.min.css'))
+//     .pipe(gulp.dest('build/public/css/'));
+// });
 gulp.task('sass', function () {
-  return gulp.src('src/public/sass/main.scss')
+  return gulp.src([
+    'node_modules/toast-grid/scss/_grid.scss',
+    'src/public/sass/main.scss'
+  ])
+    .pipe(concat('main.min.css'))
     .pipe(sass({
       outputStyle: 'compressed'
     }).on('error', sass.logError))
