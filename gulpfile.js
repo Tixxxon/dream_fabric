@@ -1,5 +1,6 @@
 let gulp = require('gulp'),
   less = require('gulp-less'),
+  sass = require('gulp-sass'),
   rename = require('gulp-rename'),
   concat = require('gulp-concat'),
   uglify = require('gulp-uglify'),
@@ -16,6 +17,13 @@ gulp.task('less', () => {
   return gulp.src('src/public/less/main.less')
     .pipe(less())
     .pipe(rename('main.min.css'))
+    .pipe(gulp.dest('build/public/css/'));
+});
+gulp.task('sass', function () {
+  return gulp.src('src/public/sass/main.scss')
+    .pipe(sass({
+      outputStyle: 'compressed'
+    }).on('error', sass.logError))
     .pipe(gulp.dest('build/public/css/'));
 });
 gulp.task('js:client', () => {
@@ -74,11 +82,12 @@ gulp.task('watch', () => {
   gulp.watch('src/views/**/*', ['views']);
   gulp.watch('src/public/javascripts/*.js', ['js:client']);
   gulp.watch('src/public/less/main.less', ['less']);
+  gulp.watch('src/public/sass/main.scss', ['sass']);
   gulp.watch([
     'src/public/images/**/*',
     'src/public/fonts/**/*'
   ], ['client:static']);
 });
 gulp.task('default', ['clear'], () => {
-  runSequence('js:client', 'js:libs', 'client:static', 'views', 'less', 'serve', 'watch');
+  runSequence('js:client', 'js:libs', 'client:static', 'views', 'sass', 'serve', 'watch');
 });
