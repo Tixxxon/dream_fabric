@@ -15,28 +15,28 @@ gulp.task('clear', () => {
 gulp.task('less', () => {
   return gulp.src('src/public/less/main.less')
     .pipe(less())
-    .pipe(sourcemap.init())
-    .pipe(cssmin())
     .pipe(rename('main.min.css'))
-    .pipe(sourcemap.write())
     .pipe(gulp.dest('build/public/css/'));
 });
 gulp.task('js:client', () => {
-  return gulp.src(['src/public/javascripts/*.js', '!src/public/javascripts/libs/*.js'])
-    //.pipe(sourcemap.init())
-    .pipe(uglify())
+  return gulp.src([
+    'src/public/javascripts/*.js'
+  ])
     .pipe(concat('main.min.js'))
-    //.pipe(sourcemap.write())
     .pipe(gulp.dest('build/public/javascripts/'));
+});
+gulp.task('client:static', () => {
+  return gulp.src([
+    'src/public/images/**/*',
+    'src/public/fonts/**/*'
+  ], { base: 'src' })
+    .pipe(gulp.dest('build/'));
 });
 gulp.task('js:libs', () => {
   return gulp.src([
     'node_modules/jquery/dist/jquery.slim.min.js'
   ])
-    //.pipe(sourcemap.init())
-    .pipe(uglify())
     .pipe(concat('libs.min.js'))
-    //.pipe(sourcemap.write())
     .pipe(gulp.dest('build/public/javascripts/'));
 });
 gulp.task('server', () => {
@@ -71,10 +71,14 @@ gulp.task('serve', ['server'], function () {
     });
 });
 gulp.task('watch', () => {
-  gulp.watch('src/views/**/*.pug', ['views']);
+  gulp.watch('src/views/**/*', ['views']);
   gulp.watch('src/public/javascripts/*.js', ['js:client']);
   gulp.watch('src/public/less/main.less', ['less']);
+  gulp.watch([
+    'src/public/images/**/*',
+    'src/public/fonts/**/*'
+  ], ['client:static']);
 });
 gulp.task('default', ['clear'], () => {
-  runSequence('js:client', 'js:libs', 'views', 'less', 'serve');
+  runSequence('js:client', 'js:libs', 'client:static', 'views', 'less', 'serve', 'watch');
 });
