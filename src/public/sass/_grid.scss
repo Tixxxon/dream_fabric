@@ -224,6 +224,10 @@ $toast-pulls: true !default;
     &.#{$toast-grid-column-namespace}--m-3-of-4 {
       width: percentage(3/4);
     }
+    
+    &.#{$toast-grid-column-namespace}--m-4-of-4 {
+      width: 100%;
+    }
   }
 
   @media (max-width: $toast-breakpoint-small) {

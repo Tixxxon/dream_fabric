@@ -13,13 +13,6 @@ let gulp = require('gulp'),
 gulp.task('clear', () => {
   return del('build');
 });
-// Убираем пока, так как используем scss
-// gulp.task('less', () => {
-//   return gulp.src('src/public/less/main.less')
-//     .pipe(less())
-//     .pipe(rename('main.min.css'))
-//     .pipe(gulp.dest('build/public/css/'));
-// });
 gulp.task('sass', function () {
   return gulp.src([
     'src/public/sass/_grid.scss',
@@ -57,6 +50,7 @@ gulp.task('server', () => {
     'src/bin/**/*',
     'src/routes/**/*',
     'src/views/**/*',
+    'src/config/**/*',
     'src/app.js'
   ], { base: 'src' })
     .pipe(gulp.dest('build/'));
