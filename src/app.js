@@ -8,7 +8,7 @@ var config = require('config');
 var logger = require('morgan');
 var bodyParser = require('body-parser');
 
-// var index = require('./routes/index');
+var index = require('./routes/index');
 // var products = require('./routes/products');
 
 // Create app and configure this
@@ -16,7 +16,7 @@ var app = express();
 //app.set('port', config.get('port'));
 
 // view engine setup
-app.set('views', __dirname + '/templates');
+app.set('views', __dirname + '/views');
 app.set('view engine', 'pug');
 
 // Setup logger
@@ -33,18 +33,18 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// app.use('/', index);
+app.use('/', index);
 // app.use('/products', products);
 
 
 // Middlewares
-app.use(function (req, res, next) {
-    if (req.url == '/') {
-        res.end("Hello, Express!");
-    } else {
-        next();
-    }
-});
+// app.use(function (req, res, next) {
+//     if (req.url == '/') {
+//         res.end("Hello, Express!");
+//     } else {
+//         next();
+//     }
+// });
 
 
 // catch 404 and forward to error handler
