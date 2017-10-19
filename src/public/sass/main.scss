@@ -6,10 +6,21 @@ body {
 @import "default.scss";
 
 .head {
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
   background-image: url('../images/top_background.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  
+  .logo {
+    margin-bottom: 2em;
+  }
+  .telephone {
+    font-size: 1.5em;
+    font-weight: bold;
+    font-family: "Helvetica";
+    color: $def_blue;
+    margin-top: 1em;
+  }
 }
