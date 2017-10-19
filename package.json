@@ -28,6 +28,14 @@
     "gulp-scss": "^1.4.0",
     "gulp-sourcemaps": "^2.6.1",
     "gulp-uglify": "^3.0.0",
-    "run-sequence": "^2.2.0"
+    "run-sequence": "^2.2.0",
+    "winston": "^2.4.0",
+    "nconf": "^0.8.5",
+    "pug": "^2.0.0-rc.4",
+    "gulp-pug": "^3.3.0",
+    "morgan": "",
+    "gulp-sass": "",
+    "config": ""
+
   }
 }
