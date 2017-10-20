@@ -24,3 +24,41 @@ body {
     margin-top: 1em;
   }
 }
+
+.advantage {
+  padding-top: 1.5em;
+
+  h3 {
+    font-weight: bold;
+    font-style: italic;
+    font-family: "Helvetica";
+    font-size: 3em;
+    text-align: center;
+  }
+
+  h4 {
+  font-weight: bold;
+  font-style: italic;
+  font-family: "Helvetica";
+  font-size: 2.5em;
+  text-align: left;
+}
+
+  .pic {
+    margin-top: 3em;
+  }
+
+  .p-middle-size {
+    color: brown;
+    font-style: italic;
+    font-size: 3em;
+    text-align: center;
+  }
+
+  .p-small-size {
+    color: brown;
+    font-style: italic;
+    font-size: 2em;
+    text-align: left;
+  }
+}
