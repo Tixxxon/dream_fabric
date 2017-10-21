@@ -9,12 +9,15 @@ body {
 .font-bold {
   font-family: "Roboto";
   font-weight: bold;
-
 }
 
 .font-bold-italic {
   @extend .font-bold;
   font-style: italic;
+}
+
+a {
+  text-decoration: none;
 }
 
 @import "header";

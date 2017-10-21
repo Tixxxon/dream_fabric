@@ -1,8 +1,37 @@
+
 .social {
-  padding-top: 4.0em;
+  @include border-radius(5px);
+  box-shadow: 3px 3px 5px 1px rgba(0, 0, 0, 0.35);
+  background: #32569a;
+  @include background-linear-gradient(to left, #8DB9C5, #3470b9);
+
+  margin-top: 2.0em;
   p {
+
     text-align: center;
+    color: #ffffff;
     @extend .font-bold-italic;
-    font-size: 4.0em;
+    font-size: 3.0em;
+    font-weight: 500;
+  }
+
+  img {
+    margin-top: 0.3em;
+  }
+
+  img:hover {
+    transform: scale(1.2);
+  }
+
+  @media (min-width: 768px) and (max-width: 991px) {
+    img {
+      margin-top: 0.6em;
+    }
+  }
+
+  @media (min-width: 992px) and (max-width: 1199px) {
+    img {
+      margin-top: 1.0em;
+    }
   }
 }
