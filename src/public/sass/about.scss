@@ -1,0 +1,15 @@
+.about {
+  padding-top: 4.0em;
+  .address {
+    @include border-radius(5px);
+    background-color: white;
+    box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
+    padding: 2.0em 0 2.5em 0;
+    margin: -12em 0 0 0;
+    .text {
+      text-align: left;
+      font-weight: bold;
+      font-size: 1.5em;
+    }
+  }
+}

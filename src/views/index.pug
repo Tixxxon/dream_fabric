@@ -3,7 +3,7 @@ extends layout
 block content
 
   .container
-    .row.head
+    .row.header
       .row
         img.col-xs-4.col-sm-4.col-md-2.col-xs-push-4.col-sm-push-4.col-md-push-5.logo(src="/images/logo.png")
         .col-xs-5.col-sm-5.col-md-5
@@ -45,11 +45,15 @@ block content
 
       .row
         img.col-xs-12.col-sm-12.col-md-12(src="/images/kitchen.png")
-        .col-xs-12.col-sm-12.col-md-12
+      .row
+        .col-xs-3.col-sm-3.col-md-3
           img.img-small(src="/images/closet.png")
-          img.img-small.img-offset(src="/images/wardrobe.png")
-          img.img-small.img-offset(src="/images/kids-room.png")
-          img.img-small.img-offset(src="/images/other.png")
+        .col-xs-3.col-sm-3.col-md-3
+          img.img-small(src="/images/wardrobe.png")
+        .col-xs-3.col-sm-3.col-md-3
+          img.img-small(src="/images/kids-room.png")
+        .col-xs-3.col-sm-3.col-md-3
+          img.img-small(src="/images/other.png")
 
 
     .row.social

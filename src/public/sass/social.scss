@@ -1,0 +1,8 @@
+.social {
+  padding-top: 4.0em;
+  p {
+    text-align: center;
+    @extend .font-bold-italic;
+    font-size: 4.0em;
+  }
+}
