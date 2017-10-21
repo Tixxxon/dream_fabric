@@ -4,6 +4,18 @@ body {
 }
 
 @import "default.scss";
+@import "mixins.scss";
+
+.font-bold {
+  font-family: "Roboto";
+  font-weight: bold;
+
+}
+
+.font-bold-italic {
+  @extend .font-bold;
+  font-style: italic;
+}
 
 .head {
   padding-top: 1.5em;
@@ -28,54 +40,63 @@ body {
 
 .advantage {
   padding-top: 1.5em;
-
-  h3 {
-    font-weight: bold;
-    font-style: italic;
-    font-size: 3em;
-    text-align: center;
+  h1{
+    @extend .font-bold-italic;
+    margin-top: 1.5em;
+    font-weight: 500;
+    text-align: left;
   }
 
-  h4 {
-  margin-top: 1.7em;
-  margin-bottom: 0;
-  font-weight: bold;
-  font-style: italic;
-  font-size: 2.2em;
-  text-align: left;
+  h2 {
+    @extend .font-bold;
+    padding-top: 1.5em;
+    margin: 0;
+    vertical-align: text-bottom;
+    font-weight: 500;
+    text-align: justify;
+  }
+
+  h3 {
+    @extend .font-bold;
+    margin-top: 1.95em;
+    margin-bottom: 0;
+    text-align: left;
 }
 
   .pic {
-    margin-top: 3em;
+    margin-top: 2em;
   }
 
   .p-middle-size {
     color: brown;
+    font-family: "Roboto";
+    font-weight: 300;
     font-style: italic;
-    font-size: 3em;
-    text-align: center;
+    text-align: left;
+    font-size: 2.5em;
+    padding-top: 4.0em;
   }
 
   .p-small-size {
-    color: brown;
-    font-style: italic;
-    font-size: 2em;
-    text-align: left;
+    @extend .p-middle-size;
+    font-weight: 400;
+    font-size: 1.7em;
+    padding-top: 1.4em;
+    margin-bottom: 2.0em;
   }
 }
 
 .production {
   padding-top: 3.0em;
   h1 {
+    @extend .font-bold-italic;
     text-align: center;
-    font-weight: bold;
-    font-style: italic;
     font-size: 4.0em;
   }
   img {
+    @include border-radius(7px);
     margin-bottom: 1.5em;
     padding: 0;
-    border-radius: 7px;
     box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.35);
     float: left;
   }
@@ -92,8 +113,7 @@ body {
   padding-top: 4.0em;
   p {
     text-align: center;
-    font-weight: bold;
-    font-style: italic;
+    @extend .font-bold-italic;
     font-size: 4.0em;
   }
 }
@@ -103,9 +123,9 @@ body {
   padding-top: 4.0em;
 
   .address {
+    @include border-radius(5px);
     background-color: white;
     box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
-    border-radius: 5px;
     padding: 2.0em 0 2.5em 0;
     margin: -12em 0 0 0;
     .text {

@@ -16,6 +16,8 @@ gulp.task('clear', () => {
 gulp.task('sass', function () {
   return gulp.src([
     'src/public/sass/bootstrap-grid-typography.scss',
+    'src/public/sass/default.scss',
+    'src/public/sass/mixins.scss',
     'src/public/sass/main.scss'
   ])
     .pipe(concat('main.min.css'))
