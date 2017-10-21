@@ -1,8 +1,22 @@
+html {
+  min-height: 100%;
+  position: relative;
+}
+
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin-bottom: 60px;
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: inherit;
+  height: 60px;
 }
 
 a {
   color: #00B7FF;
+  text-decoration: none;
 }

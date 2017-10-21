@@ -17,9 +17,9 @@ body {
     margin-bottom: 2em;
   }
   .telephone {
-    font-size: 1.5em;
+    font-size: 2.2em;
     font-weight: bold;
-    font-family: "Helvetica";
+
     color: $def_blue;
     margin-top: 1em;
   }
@@ -31,16 +31,16 @@ body {
   h3 {
     font-weight: bold;
     font-style: italic;
-    font-family: "Helvetica";
     font-size: 3em;
     text-align: center;
   }
 
   h4 {
+  margin-top: 1.7em;
+  margin-bottom: 0;
   font-weight: bold;
   font-style: italic;
-  font-family: "Helvetica";
-  font-size: 2.5em;
+  font-size: 2.2em;
   text-align: left;
 }
 
@@ -60,5 +60,57 @@ body {
     font-style: italic;
     font-size: 2em;
     text-align: left;
+  }
+}
+
+.production {
+  padding-top: 3.0em;
+  h1 {
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 4.0em;
+  }
+  img {
+    margin-bottom: 1.5em;
+    padding: 0;
+    border-radius: 7px;
+    box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.35);
+    float: left;
+  }
+  .img-small {
+    max-width: 19em;
+  }
+  .img-offset {
+    margin-left: 2.4em;
+
+  }
+}
+
+.social {
+  padding-top: 4.0em;
+  p {
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 4.0em;
+  }
+}
+
+
+.about {
+  padding-top: 4.0em;
+
+  .address {
+    background-color: white;
+    box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    padding: 2.0em 0 2.5em 0;
+    margin: -12em 0 0 0;
+    .text {
+      text-align: left;
+      font-weight: bold;
+      font-size: 1.5em;
+    }
   }
 }
