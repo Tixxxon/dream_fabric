@@ -49,7 +49,7 @@ body {
 
   h2 {
     @extend .font-bold;
-    padding-top: 1.5em;
+    padding-top: 2.0em;
     margin: 0;
     vertical-align: text-bottom;
     font-weight: 500;
@@ -61,7 +61,36 @@ body {
     margin-top: 1.95em;
     margin-bottom: 0;
     text-align: left;
-}
+  }
+
+  @media (max-width: 767px) {
+    h2 {
+      padding-top: 1.15em;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 991px) {
+    h2 {
+      padding-top: 0.95em;
+    }
+  }
+
+  @media (min-width: 992px) and (max-width: 1199px) {
+    h2 {
+      padding-top: 1.21em;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    h2 {
+      padding-top: 1.5em;
+    }
+  }
+
+
+
+
+
 
   .pic {
     margin-top: 2em;
