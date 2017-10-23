@@ -66,11 +66,19 @@ footer {
     ul {
       margin-left : -0.5em;
     }
+
+    p {
+      margin-top: 0.2em;
+    }
   }
 
   @media (min-width: 992px) and (max-width: 1199px) {
     img {
       margin-left : -2.0em;
+    }
+
+    p {
+      margin-top: 0.4em;
     }
   }
 }
