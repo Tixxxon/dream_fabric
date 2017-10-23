@@ -1,6 +1,13 @@
+html {
+  min-height: 100%;
+  position: relative;
+}
+
 body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin: 0 0 10em 0;
   padding: 0;
-  margin: 0;
 }
 
 @import "default.scss";
@@ -25,3 +32,4 @@ a {
 @import "production";
 @import "social";
 @import "about";
+@import "footer";
