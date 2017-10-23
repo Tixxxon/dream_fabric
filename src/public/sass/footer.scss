@@ -1,7 +1,7 @@
 footer {
   position: absolute;
   bottom: 0;
-  height: 10em;
+  height: 9em;
   background: lightblue;
   left: 0;
   right: 0;
@@ -11,8 +11,8 @@ footer {
   @include background-linear-gradient(to top, #8DB9CC, #8DB9DA);
 
   img {
-    margin: 1.0em 1.0em 0 0;
-    max-width: 2em;
+    margin: 1.0em 0 0 0.6em;
+    max-width: 1.5em;
   }
 
   img:hover {
@@ -23,20 +23,15 @@ footer {
     margin-left: -1.1em;
   }
 
-  span {
-
-    text-align: justify;
-  }
   ul {
-    margin-top: 2.0em;
-    margin-left : -2.5em;
+    margin-top: 1.0em;
+    text-align: center;
   }
-
 
   .hr {
     li {
         display: inline;
-        margin-right: 5.0em;
+        margin-right: 4.0em;
         font-size: 1.2em;
         text-transform: uppercase;
 
@@ -59,7 +54,7 @@ footer {
     text-align:center;
     p {
         color: white;
-        margin-top: 1.0em;
+        margin-top: 0.75em;
     }
   }
   @media (min-width: 768px) and (max-width: 991px) {
