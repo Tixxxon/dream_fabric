@@ -4,34 +4,29 @@
   box-shadow: 0px 4px 10px 1px rgba(0, 0, 0, 0.3);
   background: rgb(50, 86, 154);
   @include background-linear-gradient(to left, #8DB9C5, #3470b9);
-
+  
   margin-bottom: 2.0em;
   p {
-
     text-align: center;
     color: #ffffff;
     @extend .font-bold-italic;
-    font-size: 3.0em;
-    font-weight: 500;
+    
+    font-size: 3em;
+    font-weight: 100;
+    font-style: italic;
   }
-
-  img {
-    margin-top: 0.3em;
-  }
-
-  img:hover {
-    transform: scale(1.1);
-  }
-
-  @media (min-width: 768px) and (max-width: 991px) {
-    img {
-      margin-top: 0.6em;
-    }
-  }
-
-  @media (min-width: 992px) and (max-width: 1199px) {
-    img {
-      margin-top: 1.0em;
+  
+  a {
+    color: #FFFFFF;
+    font-size: 3em;
+    padding: 1em;
+    text-decoration: none;
+    
+    transition: all 0.5s;
+    
+    &:hover {
+      transform: scale(1.3);
+      color: rgb(204, 204, 204);
     }
   }
 }
