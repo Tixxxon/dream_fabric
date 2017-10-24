@@ -2,11 +2,23 @@
   .dm-telephone {
     p {
       font-size: 0.4em;
+      text-align: center;
     }
   }
+
+  .dm-advantage {
+    h1 {
+      font-size: 1.5em;
+    }
+    p.p-middle-size {
+      padding-top: 1.0em;
+    }
+  }
+
   .img-small {
     max-height: 10em;
   }
+
   ul.hr {
     padding: 0;
     a {
