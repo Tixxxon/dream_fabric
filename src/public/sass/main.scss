@@ -1,10 +1,4 @@
-body {
-  padding: 0;
-  margin: 0;
-}
-
-@import "default.scss";
-@import "mixins.scss";
+@import "mixins";
 
 .font-bold {
   font-family: "Roboto";
@@ -14,10 +8,6 @@ body {
 .font-bold-italic {
   @extend .font-bold;
   font-style: italic;
-}
-
-a {
-  text-decoration: none;
 }
 
 @import "header";

@@ -15,9 +15,8 @@ gulp.task('clear', () => {
 });
 gulp.task('sass', function () {
   return gulp.src([
-    'src/public/sass/bootstrap-grid-typography.scss',
-    'src/public/sass/default.scss',
-    'src/public/sass/mixins.scss',
+    //'src/public/sass/bootstrap-grid-typography.scss',
+    'src/public/stylesheets/normalize.css',
     'src/public/sass/main.scss'
   ])
     .pipe(concat('main.min.css'))
@@ -92,6 +91,6 @@ gulp.task('watch', () => {
 gulp.task('default', ['clear'], () => {
   runSequence('js:client', 'js:libs', 'client:static', 'views', 'sass', 'serve', 'watch');
 });
-gulp.task('set-dev-node-env', function() {
-    return process.env.NODE_ENV = 'development';
+gulp.task('set-dev-node-env', function () {
+  return process.env.NODE_ENV = 'development';
 });

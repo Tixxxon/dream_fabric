@@ -1,11 +1,11 @@
 
-.social {
-  @include border-radius(5px);
-  box-shadow: 3px 3px 5px 1px rgba(0, 0, 0, 0.35);
-  background: #32569a;
+.dm-social {
+  @include border-radius(10px);
+  box-shadow: 0px 4px 10px 1px rgba(0, 0, 0, 0.3);
+  background: rgb(50, 86, 154);
   @include background-linear-gradient(to left, #8DB9C5, #3470b9);
 
-  margin-top: 2.0em;
+  margin-bottom: 2.0em;
   p {
 
     text-align: center;

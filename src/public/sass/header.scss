@@ -1,20 +1,22 @@
-.header {
+.dm-header {
   padding-top: 1.5em;
   padding-bottom: 1.5em;
+  margin-bottom: 2em;
+  
   background-image: url('../images/top_background.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 
-  .logo {
+  .dm-logo {
     margin-bottom: 2em;
     align-items: center;
   }
-  .telephone {
+  .dm-telephone {
     font-size: 2.2em;
     font-weight: bold;
 
-    color: $def_blue;
+    color: rgb(0, 89, 167);
     margin-top: 1em;
   }
 }

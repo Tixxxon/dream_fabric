@@ -1,78 +1,91 @@
 extends layout
 
 block content
-
+  .container-fluid
+    .row.dm-header
+      .col-xs-12
+        .row
+          img.col-xs-4.col-md-2.col-xs-push-4.col-sm-push-4.col-md-push-5.dm-logo(src="/images/logo.png")
+          .col-xs-5.col-sm-5.col-md-5
+        .row
+          img.col-xs-10.col-md-6.col-xs-push-1.col-sm-push-1.col-md-push-3.dm-logo_img(src="/images/love.png")
+        .row.dm-telephone
+          .col-xs-6.col-md-4.col-xs-push-6.col-sm-push-6.col-md-push-8
+            .col-md-12 8 (952) 457-05-76
+            .col-md-12 8 (83130) 3-22-80
   .container
-    .row.header
-      .row
-        img.col-xs-4.col-sm-4.col-md-2.col-xs-push-4.col-sm-push-4.col-md-push-5.logo(src="/images/logo.png")
-        .col-xs-5.col-sm-5.col-md-5
-      .row
-        img.col-xs-10.col-sm-10.col-md-8.col-xs-push-1.col-sm-push-1.col-md-push-2.logo_img(src="/images/love.png")
-      .row.telephone
-        .col-xs-6.col-sm-6.col-md-4.col-xs-push-6.col-sm-push-6.col-md-push-8
-          .col-md-12 8 (952) 457-05-76
-          .col-md-12 8 (83130) 3-22-80
-
-    .row.advantage
-      .col-xs-12.col-sm-4.col-md-4.col-sm-offset-1.col-md-offset-1
+    .row.dm-advantage
+      .col-xs-12.col-sm-4.col-sm-offset-1.col-md-offset-1
         h1 Почему &nbsp; нам доверяют?
         p.p-middle-size  более 5-ти лет на рынке мебели
 
-      .col-xs-12.col-sm-6.col-md-6.col-sm-offset-1.col-md-offset-1
+      .col-xs-12.col-sm-6.col-sm-offset-1.col-md-offset-1
         .row
-          img.col-xs-2.col-sm-2.col-md-2.pic(src="/images/settings-128.png")
-          .col-xs-10.col-sm-10.col-md-10
+          img.col-xs-2.pic(src="/images/settings-128.png")
+          .col-xs-10
             h2 Любые размеры
             p.p-small-size Для нас нет понятия "Стандартный размер", мы изготавливаем индивидуальную мебель, которая подойдет именно Вам.
         .row
-          img.col-xs-2.col-sm-2.col-md-2.pic(src="/images/gear-128.png")
-          .col-xs-10.col-sm-10.col-md-10
+          img.col-xs-2.pic(src="/images/gear-128.png")
+          .col-xs-10
             h2 Любая сложность
         .row
-          img.col-xs-2.col-sm-2.col-md-2.pic(src="/images/calendar-128.png")
-          .col-xs-10.col-sm-10.col-md-10
+          img.col-xs-2.pic(src="/images/calendar-128.png")
+          .col-xs-10
             h2 Высокое качество
         .row
-          img.col-xs-2.col-sm-2.col-md-2.pic(src="/images/Auto-128.png")
-          .col-xs-10.col-sm-10.col-md-10
+          img.col-xs-2.pic(src="/images/Auto-128.png")
+          .col-xs-10
             h2 Бесплатная доставка
 
-    .row.production
-      .row
-        .col-md-12
-          h1 Мы производим
+    .row.dm-production
+      .col-xs-12
+        .row
+          .col-md-12
+            h1 Мы производим
+        .row
+          .col-xs-12.dm-product
+            a.dm-kitchen
+              .dm-filler
+                span.dm-label Кухни
+        .row
+          .col-xs-3.dm-product
+            a.dm-closet
+              .dm-filler
+                span.dm-label Шкафы-купе
+          .col-xs-3.dm-product
+            a.dm-wardrobe
+              .dm-filler
+                span.dm-label Гардеробные
+          .col-xs-3.dm-product
+            a.dm-kids-room
+              .dm-filler
+                span.dm-label Детские
+          .col-xs-3.dm-product
+            a.dm-other
+              .dm-filler
+                span.dm-label Другое
 
-      .row
-        img.col-xs-12.col-sm-12.col-md-12(src="/images/kitchen.png")
-      .row
-        .col-xs-3.col-sm-3.col-md-3
-          img.img-small(src="/images/closet.png")
-        .col-xs-3.col-sm-3.col-md-3
-          img.img-small(src="/images/wardrobe.png")
-        .col-xs-3.col-sm-3.col-md-3
-          img.img-small(src="/images/kids-room.png")
-        .col-xs-3.col-sm-3.col-md-3
-          img.img-small(src="/images/other.png")
-
-    .row.social
-      p.col-xs-7.col-sm-7.col-md-7 Больше наших работ в социальных сетях
-      .col-xs-5.col-sm-5.col-md-5
-        a(href="#")
-          img.col-xs-6.col-sm-6.col-md-4(src="/images/insta-white-200.png")
-        a(href="#")
-          img.col-xs-6.col-sm-6.col-md-4(src="/images/vk-white-200.png")
+    .row
+      .col-xs-12.dm-social
+        .row
+          p.col-xs-7 Больше наших работ в социальных сетях
+          .col-xs-5
+            a(href="#")
+              img.col-xs-6.col-md-4(src="/images/insta-white-200.png")
+            a(href="#")
+              img.col-xs-6.col-md-4(src="/images/vk-white-200.png")
 
 
-    .row.about
-      img.col-xs-12.col-sm-12.col-md-12(src="/images/map.png")
-      .col-xs-10.col-sm-10.col-md-6.col-xs-push-1.col-sm-push-1.col-md-push-3.address
-        img.col-xs-4.col-sm-4.col-md-4.col-xs-push-4.col-sm-push-4.col-md-push-4.logo(src="/images/logo.png")
-        .col-xs-10.col-sm-10.col-md-11.col-xs-push-1.col-sm-push-1.col-md-offset-1.text г. Саров
-        .col-xs-10.col-sm-10.col-md-11.col-xs-push-1.col-sm-push-1.col-md-offset-1.text МУП "Товарная база"
-        .col-xs-10.col-sm-10.col-md-11.col-xs-push-1.col-sm-push-1.col-md-offset-1.text ул. Железнодорожная д. 9 стр. 5
-        .col-xs-10.col-sm-10.col-md-11.col-xs-push-1.col-sm-push-1.col-md-offset-1.telephone 8 (952) 457-05-76
-        .col-xs-10.col-sm-10.col-md-11.col-xs-push-1.col-sm-push-1.col-md-offset-1.telephone 8 (83130) 3-22-80
-        .col-xs-10.col-sm-10.col-md-11.col-xs-push-1.col-sm-push-1.col-md-offset-1.text Garin.M.V@gmail.com
+    .row.dm-about
+      img.col-xs-12(src="/images/map.png")
+      .col-xs-10.col-md-6.col-xs-push-1.col-sm-push-1.col-md-push-3.dm-address
+        img.col-xs-4.col-xs-push-4.col-sm-push-4.col-md-push-4.dm-logo(src="/images/logo.png")
+        .col-xs-10.col-md-11.col-xs-push-1.col-sm-push-1.col-md-offset-1.dm-text г. Саров
+        .col-xs-10.col-md-11.col-xs-push-1.col-sm-push-1.col-md-offset-1.dm-text МУП "Товарная база"
+        .col-xs-10.col-md-11.col-xs-push-1.col-sm-push-1.col-md-offset-1.dm-text ул. Железнодорожная д. 9 стр. 5
+        .col-xs-10.col-md-11.col-xs-push-1.col-sm-push-1.col-md-offset-1.dm-telephone 8 (952) 457-05-76
+        .col-xs-10.col-md-11.col-xs-push-1.col-sm-push-1.col-md-offset-1.dm-telephone 8 (83130) 3-22-80
+        .col-xs-10.col-md-11.col-xs-push-1.col-sm-push-1.col-md-offset-1.dm-text Garin.M.V@gmail.com
 
     .clearfix

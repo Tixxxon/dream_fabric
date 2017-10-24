@@ -1,28 +1,88 @@
-.production {
-  padding-top: 3.0em;
+.dm-production {
+  padding-bottom: 1em;
   h1 {
     @extend .font-bold-italic;
     text-align: center;
     font-size: 4.0em;
   }
-  img {
-    @include border-radius(7px);
-    margin-bottom: 1.5em;
-    padding: 0;
-    box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.35);
-    float: left;
+  
+  .dm-product {
+    margin-bottom: 30px;
+    a {
+      display: block;
+      position: relative;
+      min-height: 30em;
+      
+      border-radius: 1em;
+      box-shadow: 0px 4px 10px 1px rgba(0, 0, 0, 0.3);
+      
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      
+      cursor: default;
+      
+      &.dm-kitchen {
+        background-image: url('http://www.i.baraholka.com.ru/files/1/2/1258545.jpg');
+      }
+      &.dm-closet {
+        background-image: url('http://moskommebel.ru/wp-content/uploads/2016/02/63.jpg');
+      }
+      &.dm-wardrobe {
+        background-image: url('http://beautywmn.ru/wp-content/uploads/2017/04/garderob.jpg');
+      }
+      &.dm-kids-room {
+        background-image: url('http://www.kartinkijane.ru/pic/201304/1920x1200/kartinkijane.ru-4033.jpg');
+      }
+      &.dm-other {
+        background-image: url('http://vip-1gl.ru/vipberrrt/581slide-08.jpg');
+      }
+
+      .dm-filler {
+        position: absolute;
+        bottom: 0;
+        height: 3.5em;
+        width: 100%;
+        
+        border-radius: 0 0 1em 1em; 
+        
+        z-index: 1;
+        
+        background-color: rgba(0, 89, 167, 0.9);
+        
+        transition: height 0.5s;
+
+        .dm-label {
+          position: absolute;
+          top: 0.5em;
+          left: 1em;
+          
+          z-index: 2;
+          
+          font-size: 1.5em;
+          color: white;
+          
+          transition: font-size 0.5s;
+        }
+      }
+      
+      &:hover {
+        .dm-filler {
+          height: 50%;
+          .dm-label {
+            font-size: 2.3em;
+          }
+        }
+      }
+    }
   }
 
-  img:hover {
-    opacity: 0.5;
-  }
-
-  .img-small {
-    max-height: 30em;
-  }
-  .img-offset {
-    margin-left: 2.4em;
-  }
+  // .img-small {
+  //   max-height: 30em;
+  // }
+  // .img-offset {
+  //   margin-left: 2.4em;
+  // }
 
   @media (max-width: 767px) {
     .img-small {
