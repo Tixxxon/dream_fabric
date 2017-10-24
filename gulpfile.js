@@ -91,6 +91,3 @@ gulp.task('watch', () => {
 gulp.task('default', ['clear'], () => {
   runSequence('js:client', 'js:libs', 'client:static', 'views', 'sass', 'serve', 'watch');
 });
-gulp.task('set-dev-node-env', function () {
-  return process.env.NODE_ENV = 'development';
-});
